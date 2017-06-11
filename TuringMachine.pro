@@ -14,9 +14,11 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    bulbmechanics.cpp
+    bulbmechanics.cpp \
+    programinterface.cpp
 
 HEADERS  += mainwindow.h \
-    bulbmechanics.h
+    bulbmechanics.h \
+    programinterface.h
 
 FORMS    += mainwindow.ui

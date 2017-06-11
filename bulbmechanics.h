@@ -15,31 +15,29 @@ struct lane{
 
 struct lane * addelem(lane *lane_base, char* letter);
 
-class bulbMechanics
-{
-public:
-    bulbMechanics();
+class bulbMechanics{
+    public:
+        bulbMechanics();
 };
 
-class Bulb
-{
-public:
-    Bulb();
-    ~Bulb();
-    instruction* instructions;
-    int instructions_count;
-private:
+class Bulb{
+    public:
+        Bulb();
+        ~Bulb();
+        char* name;
+        instruction* instructions;
+        int instructions_count;
+    private:
 };
 
-class MachineTuring
-{
-public:
-    Bulb* currentBulb;
-    Bulb* Bubs;
-    struct lane* laneTuring;
-    int step();
-    MachineTuring();
-    ~MachineTuring();
+class MachineTuring{
+    public:
+        Bulb* currentBulb;
+        std::set<Bulb*> Bulbs;
+        struct lane* laneTuring;
+        int step();
+        MachineTuring();
+        ~MachineTuring();
 };
 
 #endif // BULBMECHANICS_H
